@@ -1,0 +1,43 @@
+         irmovl array, %esp
+         nop
+         nop
+         popl %eax
+         nop
+         nop
+         popl %esi
+         nop
+         nop
+         popl %ecx
+         nop
+         nop
+         popl %edi
+         dump 1
+         irmovl array1, %esp
+         nop
+         nop
+         pushl %edi
+         nop
+         nop
+         pushl %ecx
+         nop
+         nop
+         pushl %esi
+         nop
+         nop
+         pushl %eax
+         dump 4
+         halt
+         nop
+         nop
+         nop
+         .pos 0x60
+array:   .long 1
+         .long 2
+         .long 3
+         .long 4
+         .pos 0x80
+         .long 0
+         .long 0
+         .long 0
+array1:  .long 0
+        

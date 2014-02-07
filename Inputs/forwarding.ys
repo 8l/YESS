@@ -1,0 +1,38 @@
+        #forward e_valE for valA
+        irmovl $3, %ecx
+        subl %ecx, %edx
+        dump 1
+        nop
+        #forward e_valE for valB
+        irmovl $5, %ecx
+        addl %edx, %ecx
+        dump 1
+        nop
+        #forward M_valE for valA
+        irmovl $6, %eax
+        nop
+        addl %eax, %edx
+        dump 1
+        nop
+        #forward M_valE for valB
+        irmovl $7, %esi
+        nop
+        addl %ecx, %esi
+        dump 1
+        nop
+        #forward W_valE for valA
+        irmovl $8, %ecx
+        nop
+        nop
+        addl %ecx, %eax
+        dump 1
+        nop
+        #forward W_valE for valB
+        irmovl $2, %ebp
+        nop
+        nop
+        subl %edx, %ebp
+        dump 1
+        nop
+        #forward m_valM for valA
+

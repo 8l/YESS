@@ -1,0 +1,39 @@
+                      | 
+                      |         #forward e_valE for valA
+  0x000: 30f103000000 |         irmovl $3, %ecx
+  0x006: 6112         |         subl %ecx, %edx
+  0x008: c001000000   |         dump 1
+  0x00d: 10           |         nop
+                      |         #forward e_valE for valB
+  0x00e: 30f105000000 |         irmovl $5, %ecx
+  0x014: 6021         |         addl %edx, %ecx
+  0x016: c001000000   |         dump 1
+  0x01b: 10           |         nop
+                      |         #forward M_valE for valA
+  0x01c: 30f006000000 |         irmovl $6, %eax
+  0x022: 10           |         nop
+  0x023: 6002         |         addl %eax, %edx
+  0x025: c001000000   |         dump 1
+  0x02a: 10           |         nop
+                      |         #forward M_valE for valB
+  0x02b: 30f607000000 |         irmovl $7, %esi
+  0x031: 10           |         nop
+  0x032: 6016         |         addl %ecx, %esi
+  0x034: c001000000   |         dump 1
+  0x039: 10           |         nop
+                      |         #forward W_valE for valA
+  0x03a: 30f108000000 |         irmovl $8, %ecx
+  0x040: 10           |         nop
+  0x041: 10           |         nop
+  0x042: 6010         |         addl %ecx, %eax
+  0x044: c001000000   |         dump 1
+  0x049: 10           |         nop
+                      |         #forward W_valE for valB
+  0x04a: 30f502000000 |         irmovl $2, %ebp
+  0x050: 10           |         nop
+  0x051: 10           |         nop
+  0x052: 6125         |         subl %edx, %ebp
+  0x054: c001000000   |         dump 1
+  0x059: 10           |         nop
+                      |         #forward m_valM for valA
+                      | 

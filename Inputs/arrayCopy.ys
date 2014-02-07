@@ -1,0 +1,29 @@
+        irmovl array, %eax
+        nop
+        nop
+        mrmovl 0(%eax), %ecx
+        mrmovl 4(%eax), %edx
+        mrmovl 8(%eax), %ebx
+        mrmovl 12(%eax), %esi
+        irmovl array2, %eax
+        nop
+        nop
+        rmmovl %ecx, 0(%eax)
+        rmmovl %edx, 4(%eax)
+        rmmovl %ebx, 8(%eax)
+        rmmovl %esi, 12(%eax)
+        dump 4
+        halt
+        nop
+        nop
+        nop
+        .align 4
+array:  .long 1
+        .long 2
+        .long 3
+        .long 4
+        .align 4
+array2: .long 0
+        .long 0
+        .long 0
+        .long 0

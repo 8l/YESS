@@ -1,0 +1,30 @@
+                      | 
+  0x000: 30f04c000000 |         irmovl array, %eax
+  0x006: 10           |         nop
+  0x007: 10           |         nop
+  0x008: 501000000000 |         mrmovl 0(%eax), %ecx
+  0x00e: 502004000000 |         mrmovl 4(%eax), %edx
+  0x014: 503008000000 |         mrmovl 8(%eax), %ebx
+  0x01a: 50600c000000 |         mrmovl 12(%eax), %esi
+  0x020: 30f05c000000 |         irmovl array2, %eax
+  0x026: 10           |         nop
+  0x027: 10           |         nop
+  0x028: 401000000000 |         rmmovl %ecx, 0(%eax)
+  0x02e: 402004000000 |         rmmovl %edx, 4(%eax)
+  0x034: 403008000000 |         rmmovl %ebx, 8(%eax)
+  0x03a: 40600c000000 |         rmmovl %esi, 12(%eax)
+  0x040: c004000000   |         dump 4
+  0x045: 00           |         halt
+  0x046: 10           |         nop
+  0x047: 10           |         nop
+  0x048: 10           |         nop
+  0x04c:              |         .align 4
+  0x04c: 01000000     | array:  .long 1
+  0x050: 02000000     |         .long 2
+  0x054: 03000000     |         .long 3
+  0x058: 04000000     |         .long 4
+  0x05c:              |         .align 4
+  0x05c: 00000000     | array2: .long 0
+  0x060: 00000000     |         .long 0
+  0x064: 00000000     |         .long 0
+  0x068: 00000000     |         .long 0
